@@ -1,0 +1,33 @@
+---
+title: "Is shingles less prevalent in countries that routinely immunize children against chickenpox?"
+subtitle: "Data preparation and analysis"
+author: "Clare Gibson"
+output:
+  github_document:
+    toc: true
+    toc_depth: 3
+---
+
+# Setup
+
+```{r setup}
+# Load packages
+library(knitr)          # for Rmd options
+library(tidyverse)      # for general wrangling
+library(data.table)     # for transposing data frames
+library(janitor)        # for cleaning column headers
+library(lubridate)      # for working with dates
+library(googlesheets4)  # for reading in Google Sheets files
+
+# Knitr Options
+knitr::opts_chunk$set(
+	echo = TRUE,
+	fig.align = "center",
+	message = FALSE,
+	warning = FALSE
+)
+```
+
+# Introduction
+
+This notebook serves as the documented code to modelstorm, read and prepare data for my [shingles analysis project](https://www.github.com/clarelgibson/shingles).
